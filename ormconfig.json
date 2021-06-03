@@ -5,5 +5,8 @@
   "username": "postgres",
   "password": "postgres",
   "database": "nlw05",
-  "migrations":["./src/database/migrations/**.ts"]
+  "migrations":["./src/database/migrations/**.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }
