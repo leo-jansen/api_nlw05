@@ -9,6 +9,14 @@ class MessagesController {
 
     res.json(message);
   }
+
+  async showByUser(req: Request, res: Response) {
+    const { id } = req.params;
+    const messagesService = new MessagesService;
+    const listMessage = await messagesService.listByUser(id);
+
+    return res.json(listMessage);
+  }
 }
 
 export { MessagesController };
