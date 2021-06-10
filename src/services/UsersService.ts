@@ -3,23 +3,33 @@ import { User } from "../entities/User";
 import { UsersRespository } from "../repositories/UsersRepository";
 
 class UsersService {
-  private usersRespository: Repository<User>;
+  private usersRepository: Repository<User>;
 
   constructor() {
-    this.usersRespository = getCustomRepository(UsersRespository);
+    this.usersRepository = getCustomRepository(UsersRespository);
   }
 
   async create(email: string) {
-    const isExists = await this.usersRespository.findOne({ email });
+    const isExists = await this.usersRepository.findOne({ email });
 
-    if(isExists) {
+    if (isExists) {
       return isExists;
     }
 
-    const user = this.usersRespository.create({email});
-    await this.usersRespository.save(user);
+    const user = this.usersRepository.create({ email });
+    await this.usersRepository.save(user);
     return user;
-  }  
+  }
+
+  async findByEmail(email: string) {
+    const userEmail = this.usersRepository.findOne({ email });
+    return userEmail;
+  }
+
+  async findByUser(user_id: string) {
+    const user = this.usersRepository.findOne({ id: user_id });
+    return user;
+  }
 }
 
 export { UsersService };
