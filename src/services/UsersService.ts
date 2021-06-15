@@ -26,10 +26,6 @@ class UsersService {
     return userEmail;
   }
 
-  async findByUser(user_id: string) {
-    const user = this.usersRepository.findOne({ id: user_id });
-    return user;
-  }
 }
 
 export { UsersService };

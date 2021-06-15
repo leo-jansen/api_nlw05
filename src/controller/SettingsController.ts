@@ -24,8 +24,8 @@ class SettigsController {
     const { username } = req.params;
     const { chat } = req.body;
     const settingsService = new SettingsService();
-    await settingsService.update(username, chat);
-
+    const settings = await settingsService.update(username, chat);
+    return res.json(settings);
   }
 }
 

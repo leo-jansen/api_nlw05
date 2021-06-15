@@ -23,7 +23,7 @@ const http = createServer(app);
 const io = new Server(http);
 
 io.on("connection", (socket: Socket) => {
-  console.log("Conectado", socket.id);
+  //console.log("Conectado", socket.id);
 })
 
 app.use(express.json());
