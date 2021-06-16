@@ -37,6 +37,9 @@ io.on("connect", (socket) => {
     await messagesService.create({ text, user_id });
     const allMessages = await messagesService.listByUser(user_id);
     socket.emit("client_list_all_messages", allMessages);
+
+    const alluser = await connectionsService.allConnectionsWithoutAdmin();
+    io.emit("admin_list_all_users", alluser);
   })
 
   socket.on("client_send_to_admin", async params => {
