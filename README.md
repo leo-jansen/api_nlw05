@@ -1,11 +1,11 @@
 # Projeto NLW#05
 
-Chat desenvolvido em node.js como projeto do eveto NLW#05, como algumas alterações de tecnologias do projeto orignal para estudo pessoal
+Chat desenvolvido em node.js, projeto do evento NLW#05, com algumas alterações de tecnologias do projeto original para estudo pessoal.
 
 
 ## Tecnologias 
 
-Tecnologias utilizadas nesse projeto
+Tecnologias utilizadas nesse projeto:
 * [Node.js 14.17+](https://nodejs.org/en/download/)
 * [Typescript](https://www.typescriptlang.org/)
 * [Express](https://expressjs.com/pt-br/)
@@ -21,7 +21,7 @@ Clone o repositorio do projeto
   cd api_nlw05
 ```
 Altera as varias do banco de dados no arquivo ```ormconfig.json```, depois instalar as dependencias do projeto
-npm:
+npm
 ```bash 
   npm install
 ```
