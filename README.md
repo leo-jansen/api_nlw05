@@ -15,12 +15,12 @@ Tecnologias utilizadas nesse projeto:
 
 ## Instalação 
 
-Clone o repositorio do projeto 
+Clone o repositório do projeto 
 ```bash 
   git clone https://github.com/leo-jansen/api_nlw05.git
   cd api_nlw05
 ```
-Altera as varias do banco de dados no arquivo ```ormconfig.json```, depois instalar as dependencias do projeto
+Altera as variáveis do banco de dados no arquivo ```ormconfig.json```, depois instalar as dependências do projeto
 npm
 ```bash 
   npm install
@@ -29,7 +29,7 @@ yarn:
 ```bash 
   yarn install
 ```
-Executar os comando abaixo para rodar as migrations
+Executar os comandos abaixo para rodar as migrations
 npm:
 ```bash 
   npm typeorm migration:run
